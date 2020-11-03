@@ -1,6 +1,6 @@
 /* socket\app.js */
 const app = require("./app");
-const PORT = 8080;
+const PORT = 80;
 //const express = require("express");
 //const app2 = express();
 //const http = require("http").createServer(app2);

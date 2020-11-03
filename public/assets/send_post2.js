@@ -15,7 +15,7 @@ function postmsg() {
   };
 
   console.log(data);
-  fetch("http://localhost:8080/api/response-e1", {
+  fetch("http://localhost:8080/api/response-e2", {
     method: "POST",
     body: JSON.stringify(data),
     headers: {
