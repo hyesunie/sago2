@@ -4,6 +4,7 @@ const fs = require("fs");
 const cors = require("cors");
 const path = require("path");
 
+app.use("/js", express.static(path.resolve(__dirname, "public/js")));
 app.use(express.static(path.resolve(__dirname, "public/assets")));
 app.use(express.json()); // 응답데이터(문자열)을 JSON 데이터로 파싱해줌
 app.use(express.urlencoded({ extended: true }));
