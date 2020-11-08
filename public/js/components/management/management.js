@@ -113,11 +113,17 @@ Management.prototype = {
 
   change_img() {
     const edges = this.state.state.edges;
-    var edgeSel1 = document.querySelector(".edge-number");
-    console.log(edgeSel1.s);
+    var edgeSel1 = document.querySelector("#edge-number").value;
+    console.log(edgeSel1);
 
-    const img1 = document.querySelector(".traffic-light");
-    img1.src = "IMG/E1_T" + edges[0] + "_GL.png";
+    if (edgeSel1 == 1) {
+      const img1 = document.querySelector(".traffic-light");
+      img1.src = "IMG/E1_T" + edges[0] + "_GL.png";
+    } else {
+      const img2 = document.querySelector(".traffic-light");
+      img2.src = "IMG/E2_T" + edges[1] + "_GL.png";
+    }
+
     // const img2 = document.querySelector("#img_E2");
     // img2.src = "IMG/E2_T" + data[1] + "_GL.png";
   },
