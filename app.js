@@ -25,14 +25,19 @@ io.on("connection", (socket) => {
     const jsonData1 = JSON.parse(jsonFile1);
 
     var traffic_light1 = jsonData1.traffic_light;
-    socket.emit("edge1", traffic_light1);
+    // socket.emit("edge1", traffic_light1);
 
     const jsonFile2 = fs.readFileSync("./realtime/realtime_2.json", "utf8");
     const jsonData2 = JSON.parse(jsonFile2);
 
     var traffic_light2 = jsonData2.traffic_light;
-    socket.emit("edge2", traffic_light2);
-  }, 1000);
+
+    var data = [traffic_light1, traffic_light2];
+
+    socket.emit("edge1", data);
+    console.log(data);
+    // socket.emit("edge2", traffic_light2);
+  }, 5000);
 });
 
 module.exports = http;

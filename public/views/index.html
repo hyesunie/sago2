@@ -3,58 +3,35 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="/css/main.css" />
-    <title>DashBoard</title>
+    <link rel="stylesheet" type="text/css" href="/css/common.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/css/components/accident-response.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/css/components/dashboard.css"
+    />
+    <title>Index</title>
   </head>
 
   <body>
-    <div id="container">
-      <div id="header"></div>
-      <div id="content">
-        <h2>DashBoard</h2>
-        <button onclick="refreshImg()">IMG_TEST</button>
-        <hr />
-        <br /><br />
-        <div>
-          <div style="float: left">
-            <img id="img_E1" width="400px" />
-            <!-- src="IMG/E1_T1_GL.png"  -->
-          </div>
-          <div style="float: left">
-            <img id="img_E2" width="400px" />
-            <!-- src="IMG/E2_T1_GL.png" -->
-          </div>
-        </div>
-
-        <div id="lights" style="margin-top: 30px; padding-left: 50px">
-          <div style="float: left; margin-right: 100px">
-            <h2>< Edge 1 ></h2>
-            <p>
-              E1_T1 :
-              <input
-                type="text"
-                name="E1_T1"
-                size="20"
-                placeholder="받아올곳 표시용"
-              />
-            </p>
-            <p>E1_T2 : <input type="text" name="E1_T2" size="20" /></p>
-            <p>E1_T3 : <input type="text" name="E1_T3" size="20" /></p>
-            <p>E1_T4 : <input type="text" name="E1_T4" size="20" /></p>
-          </div>
-          <div style="float: left; padding-left: 100px">
-            <h2>< Edge 2 ></h2>
-            <p>E2_T1 : <input type="text" name="E2_T1" size="20" /></p>
-            <p>E2_T2 : <input type="text" name="E2_T2" size="20" /></p>
-            <p>E2_T3 : <input type="text" name="E2_T3" size="20" /></p>
-            <p>E2_T4 : <input type="text" name="E2_T4" size="20" /></p>
-          </div>
+    <div class="main-container">
+      <div class="header"></div>
+      <div class="test">
+        <div class="sidebar"></div>
+        <div class="main">
+          <div class="content"></div>
         </div>
       </div>
-      <div id="sidebar"></div>
-      <div id="footer"></div>
     </div>
     <script src="/socket.io/socket.io.js"></script>
-    <script src="/dashboard.js"></script>
     <script type="module" src="/js/index.js"></script>
   </body>
 </html>
