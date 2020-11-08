@@ -32,7 +32,7 @@ Management.prototype = {
         </select>
       </div>
       <div class="management__controller">
-        <select class="action-type">
+        <select id="state" class="action-type">
           <option value="">조치선택</option>
           <option value="response-accident">사고대응</option>
           <option value="change-policy">정책변경</option>
@@ -91,13 +91,21 @@ Management.prototype = {
     console.log("post");
 
     //var edge = document.querySelector("#") //화면 합쳐질 시 필요함
+    var edge = document.querySelector("#edge-number").value;
     var select = document.querySelector("#select_light").value;
     var control = document.querySelector("#control_light_time").value;
+
+    var state = document.querySelector("#state").value;
+    var send_state;
+
+    if (state == "response-accident") send_state = "A";
+    else send_state = "NA";
+
     var data = {
-      edgeNo: "1",
+      edgeNo: `${edge}`,
       traffic_light: `${select}`,
       how_many: `${control}`,
-      occasion: "NA",
+      occasion: `${send_state}`,
     };
 
     this.send_postmsg(data);
