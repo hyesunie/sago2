@@ -67,7 +67,7 @@ Management.prototype = {
 `;
   },
   send_postmsg(data) {
-    fetch("http://localhost:8080/api/response-e1", {
+    fetch("http://13.209.12.175:8080/api/response-e1", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
