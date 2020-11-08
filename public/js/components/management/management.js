@@ -113,6 +113,7 @@ Management.prototype = {
 
   change_img() {
     const edges = this.state.state.edges;
+    console.log(edges);
     var edgeSel1 = document.querySelector("#edge-number").value;
     console.log(edgeSel1);
 
