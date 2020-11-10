@@ -11,10 +11,15 @@ Dashboard.prototype = {
     }
 
     const img1 = document.querySelector("#img_E1");
-    img1.src = "IMG/E1_T" + edges[0] + "_GL.png";
+    img1.src = "IMG/E1_T" + edges[0] + "_O.png";
 
     const img2 = document.querySelector("#img_E2");
-    img2.src = "IMG/E2_T" + edges[1] + "_GL.png";
+    img2.src = "IMG/E2_T" + edges[1] + "_O.png";
+
+    setTimeout(function () {
+      img1.src = "IMG/E1_T" + edges[0] + "_GL.png";
+      img2.src = "IMG/E2_T" + edges[1] + "_GL.png";
+    }, 5000);
   },
   // TODO: 꼭 봐!
   onInit() {
