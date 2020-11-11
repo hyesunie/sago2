@@ -11,9 +11,9 @@ Dashboard.prototype = {
     }
 
     const img1 = document.querySelector("#img_E1");
-    img1.src = "IMG/E1_T" + edges[0] + "_O.png";
-
     const img2 = document.querySelector("#img_E2");
+
+    img1.src = "IMG/E1_T" + edges[0] + "_O.png";
     img2.src = "IMG/E2_T" + edges[1] + "_O.png";
 
     setTimeout(function () {
